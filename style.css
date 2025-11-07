@@ -1,0 +1,252 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1f;
+  color: #c1c1c4;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 80px; 
+  background-image:
+    linear-gradient(#2a2a2e 1px, transparent 1px),
+    linear-gradient(90deg, #2a2a2e 1px, transparent 1px);
+  background-size: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Header */
+header,
+.navbar {
+  position: fixed;        
+  top: 0;
+  left: 0;
+  width: 100%;            
+  z-index: 1000;          
+  background: rgba(28,28,32,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 12px 0;
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-brand span {
+  color: #3bb89e !important;
+}
+
+.nav-link {
+  color: #b5b5b8 !important;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #3bb89e;
+  transition: width 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #3bb89e !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* About */
+.about-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.about {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 8%;
+  text-align: center;
+}
+
+.about-text h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #e2e2e5;
+}
+
+.about-text h2 {
+  font-size: 1.4rem;
+  color: #3bb89e;
+  margin-bottom: 18px;
+}
+
+.about-text p {
+  color: #a5a5a8;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+
+.social-links a,
+.social-links .btn {
+  display: inline-block;
+  margin: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #3bb89e, #6496d6);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.social-links a:hover,
+.social-links .btn:hover {
+  opacity: 0.9;
+}
+
+/* Experience */
+.experience-section {
+  background: rgba(38,38,42,0.96);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+  padding: 20px;
+}
+
+.experience-section h2 {
+  font-size: 1.8rem;
+  color: #eee;
+  margin-bottom: 20px;
+  border-left: 3px solid #3bb89e;
+  padding-left: 8px;
+}
+
+.timeline {
+  border-left: 2px solid #3bb89e;
+  margin-left: 12px;
+  padding-left: 14px;
+}
+
+.exp-entry {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.exp-entry .dot {
+  width: 14px;
+  height: 14px;
+  background: #3bb89e;
+  border-radius: 50%;
+  position: absolute;
+  left: -22px;
+  top: 6px;
+}
+
+.exp-content h3 {
+  font-size: 1rem;
+  color: #3bb89e;
+  margin-bottom: 4px;
+}
+
+.exp-content h3 span {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-left: 6px;
+}
+
+.exp-content .place {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.exp-content ul {
+  list-style: disc inside;
+  color: #b5b5b8;
+  font-size: 0.9rem;
+}
+
+/* Projects */
+.card {
+  border: none;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title a {
+  color: #6496d6;
+  transition: color 0.3s;
+}
+
+.card-title a:hover {
+  color: #3bb89e;
+}
+
+/* Contact */
+.contact-card {
+  background: #121214;
+  color: #eee;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.3);
+}
+
+.contact-card input,
+.contact-card textarea {
+  border: 1px solid #444;
+  background: #121214;
+  color: #eee;
+  padding: 8px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  background: #121214;
+  color: #eee;
+  border-color: #3bb89e;
+  box-shadow: 0 0 0 0.2rem rgba(59, 184, 158, 0.25);
+}
+
+.contact-card .btn {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background: #121214;
+  color: #777;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 20px 0;
+  text-align: center;
+}
