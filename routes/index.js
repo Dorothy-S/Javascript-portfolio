@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* home page. */
 router.get('/', function(req, res, next) {
-  res.render('pages/home', { title: 'Dorothy Sahijwani', activePage: 'home' });
+  res.render('pages/index', { title: 'Dorothy Sahijwani', activePage: 'home' });
 });
 
 /* home page. */
 router.get('/home', function(req, res, next) {
-  res.render('pages/home', { title: 'Dorothy Sahijwani', activePage: 'home' });
+  res.render('pages/index', { title: 'Dorothy Sahijwani', activePage: 'home' });
 });
 
 /* About page. */
