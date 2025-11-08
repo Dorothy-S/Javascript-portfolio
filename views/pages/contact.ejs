@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!--dark background, light text-->
+<body class="bg-dark text-light">
+
+  <main>
+    <section class="container py-5"> <!--Centers content and adds vertical padding-->
+      <div class="col-lg-6 mx-auto"> <!--Centers content horizontally-->
+        <div class="p-4 rounded shadow bg-dark border border-secondary"> <!--adds padding, makes box curved. add shadows, dark background, and border-->
+          <h2 class="text-center mb-3">Contact Me</h2> <!--botem margin, center text-->
+          <p class="text-center mb-4">
+            Send a message below or email me directly at <br>
+            <span class="text-primary">Dorothy@gmail.com</span> <!--email address-->
+          </p>
+
+          <form>
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control bg-secondary text-light" required> <!--gives text area, grey background-->
+
+            <label for="email" class="form-label mt-3">Email</label>
+            <input type="email" id="email" class="form-control bg-secondary text-light" required><!--gives text area, grey background-->
+
+            <label for="cell" class="form-label mt-3">Phone</label>
+            <input type="tel" id="cell" class="form-control bg-secondary text-light" placeholder="XXX-XXX-XXXX" required><!--gives text area, grey background-->
+
+            <label for="comments" class="form-label mt-3">Message</label>
+            <textarea id="comments" rows="4" class="form-control bg-secondary text-light" required></textarea> <!--gives text area, grey background-->
+
+            <button type="submit" class="btn btn-primary w-100 mt-4">Send</button> <!--blue button, full width, top margin-->
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
